@@ -1,0 +1,10 @@
+services:
+  api:
+    build: .
+    container_name: api-escolar
+    ports:
+      - "8000:8000"
+    volumes:
+      # Monta el código fuente para que --reload funcione en desarrollo.
+      # El archivo de la base de datos SQLite (escola.db) se creará aquí.
+      - .:/app
